@@ -12,17 +12,25 @@ function onGoogleMapResponse() {
 
 
 /*  Obtiene escuelas del dataset y las pone en el mapa */
+var schools = [];
 function getSchools() {
 
-    $.ajax({
-        url: "http://datosabiertos.bogota.gov.co/api/action/datastore_search?resource_id=8e3cdb48-266f-45bd-8006-21040db5b876",
-        data: "data",
-        type: "GET",
-        dataType: "jsonp",        
-        success: function(result) {
-            console.log(result);
+    $.getJSON("institucionesedsuperior.json", function(data){
+        console.log(data);
+        var marker;
+        for(var i = 0; i < data.length ; i++) {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(data[i].coord_y, data[i].coord_x),
+                map: map
+            });
+            schools.push(marker);
         }
+
+        var markerCluster = new MarkerClusterer(map, schools,
+            {imagePath: './m'});
+      
     })
+    
 }
 
 $(document).ready(function() {
