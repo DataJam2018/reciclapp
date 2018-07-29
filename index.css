@@ -46,10 +46,12 @@
 .role:hover {
     cursor: pointer;
     font-size: 25px;
+    border: solid 8px gray;
 }
 
-.role:hover > .icon {
-    font-size: 200px;
+.role > a:link {
+    color: gray;
+    text-decoration: none;
 }
 
 .icon {
@@ -67,4 +69,27 @@
 
 .ranking-list {
     margin: 15px 0px;
+}
+
+
+/*-------------------      SCHOOLS.HTML        ------------------*/
+
+.school-container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+#school-name {
+    margin-top: 90px;
+}
+
+.statistics-info, .ranking-info, .forms {
+    max-width: 100%;
+    height: 300px;
+    border: solid 2px black;
+}
+
+.forms {
+    font-size: 20px;
+    padding: 5% 0 0 10%;
 }
