@@ -1,0 +1,70 @@
+#mapContainer {
+    width: 50%;
+    height: 400px;
+    margin: auto;
+    border-radius: 10px;
+    border: black 2px solid; 
+}
+
+.navbar a:link {
+    color: white;    
+}
+
+.white-link {
+    font-size: 30px;
+    color: white;
+}
+
+.colors {    
+    background-color: green;
+    color: white;
+}
+
+.banner {
+    height: auto;            
+    margin: 100px auto 0px auto;
+    text-align: center;
+}
+
+.content {
+    width: 70%;
+    margin: 15px auto;
+    
+}
+
+.role {
+    height: auto;    
+    max-width: auto;
+    border-radius: 50px;
+    border: solid 5px gray;
+    text-align: center;
+    padding: 10%;
+    color: gray;   
+    font-size: 20px;
+}
+
+.role:hover {
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.role:hover > .icon {
+    font-size: 200px;
+}
+
+.icon {
+    font-size: 180px;     
+}
+
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;   
+}
+
+.ranking-list {
+    margin: 15px 0px;
+}
