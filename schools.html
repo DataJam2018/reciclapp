@@ -16,14 +16,14 @@
                     <a href="index.html"><img  class="logo" src="recicladclogo.png"></a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a class="white-link">Test 1</a></li>
-                    <li><a class="white-link">Test 2</a></li>
+                    <li><a class="white-link">Asociación<br> Recicladora</a></li>
+                    <li><a class="white-link">Institución<br> Educativa</a></li>
                 </ul>
 
             </div>
         </div>
 
-        <h1 id="school-name">Colegio #1 Anonimo</h1>
+        <h1 id="school-name">Institución Educativa</h1>
         <div class="school-container">
             <div class="row">
                     <div class="col-md-8">
@@ -33,14 +33,21 @@
                                 <input type="checkbox" value="metal"/> Metal<br/>
                                 <input type="checkbox" value="vidrio"/> Vidrio<br/>
                                 Otros: 
-                                <textarea name="otro" rows="1">Que otros materiales tienes?</textarea>  <br/>
+                                <textarea name="otro" rows="1" cols="50">Que otros materiales tienes?</textarea>  <br/>
 
                                 Cuantos kilogramos de material? : 
                                 <input type="number" name="kgs" min="1">
-                                kgs <br>
-
-                                <input type="submit" value="Enviar">
+                                kgs <br><br>
                             </form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button id="sendMaterials" class="btn btn-block center-block btn-primary">Enviar</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <a onclick="window.open('http://oga.bogota.unal.edu.co/wp-content/uploads/2017/09/CERTIFICACION-4977.pdf','_blank');window.close();return false"><button id="certificateBtn" class="btn btn-block center-block btn-success" disabled>Descargar Certificado</button></a>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -59,12 +66,12 @@
     
         <div class="navbar footer colors text-center">
             DataJam 2018 Vivelab
-        </div>
-
-        <script src="index.js"></script>
+        </div>       
         
         <!-- Jquery -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         
+        <script src="index-school.js"></script>
+
     </body>
 </html>
