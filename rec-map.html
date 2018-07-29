@@ -23,12 +23,12 @@
             </div>
         </div>
 
-        <h1>Colegio #1 Anonimo</h1>
+        <h1>Mapa de Instituciones educativas</h1>
         <div class="row">
             <div class="col-md-8">
-                <div class="forms">
-                    THIS IS A FORM
-                </div>
+                <div id="wrapper">
+                    <div id="mapContainer"></div>
+                </div>                
             </div>
             <div class="col-md-4">
                 <div class="statistics-info">
@@ -44,12 +44,17 @@
     
         <div class="navbar footer colors text-center">
             DataJam 2018 Vivelab
-        </div>
-
-        <script src="index.js"></script>
+        </div>        
         
         <!-- Jquery -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+        <script src="index.js"></script>
+
+        <!-- Google Maps-->
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBm4CyWaG7Dc4Oep8wLxEgl2fsZ2waeLu8&callback=onGoogleMapResponse">
+        </script>
         
     </body>
 </html>
