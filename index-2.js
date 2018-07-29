@@ -16,15 +16,16 @@ function onGoogleMapResponse() {
 var schools = [];
 function getSchools() {
 
-    $.getJSON("institucionesedsuperior.json", function(data){        
+    $.getJSON("centrosreciclaje.json", function(data){    
+        console.log(data);    
         var marker, infoWindow, content;
-        for(var i = 0; i < data.length ; i++) {
+        for(var i = 2; i < data.length ; i++) {
             marker = new google.maps.Marker({
-                position: new google.maps.LatLng(data[i].coord_y, data[i].coord_x),
+                position: new google.maps.LatLng(data[i][2], data[i][3]),
                 map: map
             });
 
-            content = "<div style='font-weight:bold;'>" + data[i].Institución + "<br>"+ data[i].Dirección+"</div>";
+            content = "<div style='font-weight:bold;'>" + data[i][0] + "<br>"+ data[i][1]+"</div>";
             infoWindow = new google.maps.InfoWindow({
                 content: content
               });
@@ -40,8 +41,8 @@ function getSchools() {
             schools.push(marker);
         }
 
-        var markerCluster = new MarkerClusterer(map, schools,
-            {imagePath: './m'});
+        //var markerCluster = new MarkerClusterer(map, schools,
+          //  {imagePath: './m'});
       
     })
     
